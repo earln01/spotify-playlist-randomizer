@@ -1,7 +1,0 @@
-import os
-
-CLIENT_ID = '85895ef4510c4f708fe9cb6c0ac1a67f'
-CLIENT_SECRET = '192f7dbf753b417598b0129d05344e7f'
-REDIRECT_URI = 'http://127.0.0.1:5000/callback'
-FLASK_SECRET = os.urandom(24)
-
