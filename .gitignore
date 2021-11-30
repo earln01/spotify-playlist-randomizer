@@ -130,3 +130,6 @@ dmypy.json
 
 #Spotify API Secrets
 config.py
+
+# VSCode setup files
+.vscode/
