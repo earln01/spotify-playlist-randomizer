@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Welcome to Spotify Randomizer</title>
+    </head>
+    <body style = 'background-color: whitesmoke;'>
+        <h1 style='font-family: sans-serif; text-align: center; margin-top: 2%;'> Welcome to the Spotify Randomizer Widget.</h1>
+        <h2 style='font-family: sans-serif; text-align: center; width: 40%; margin-left: 30%; margin-top: 3%; font-weight: 200;'>This is a neat little site that will let you randomize the permanent order of one of your Spotify playlists, forever. No pressure.</h3>
+        <button type = 'button', onclick = "window.location.href = '{{auth_url}}'" style = 'height: 60px; width: 15%; margin-left: 42.5%; margin-top: 3%; background-color: #1DB954; border-color: white; cursor:pointer;font-family: sans-serif; font-size: 13pt; color: white; line-height: 1.2;'>
+        Login to your Spotify Account
+        </button>
+        <p style = 'font-family: sans-serif; position: absolute; text-align: right; bottom: 1%; right:2%; font-size: 12pt;'>Spotify Randomizer Widget</p>
+        <img src = "{{url_for('static', filename = 'Spotify_Logo.png')}}" style="position: absolute; width:10%; height: auto; bottom:2%; left:1%">
+    </body>
+</html>

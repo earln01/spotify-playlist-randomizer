@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Let's Get Randomizing</title>
+        <style>
+            form {
+                width:40%;
+                margin-left: 30%;
+                text-align: center;
+                margin-top: 2%;
+                
+            }
+            select{
+                font-size: 15pt;
+                font-family: sans-serif;
+                height: 30px;
+                width: 30%;
+            }
+            input {
+                font-size: 15pt;
+                color: white;
+                font-family: sans-serif;
+                background-color: #1DB954;
+                border-color: white;
+                height: 30px ;
+                margin-left: 2%;
+                cursor: pointer;
+            }
+            option{
+                margin-right: 5px;
+            }
+        </style>
+    </head>
+    <body style = 'background-color: whitesmoke;'>
+        <h1 style = 'font-family: sans-serif; text-align: center; width: 50%; margin-left: 25%; margin-top: 2%;'>Select a playlist and press the Randomize button to do the thing. </h1>
+        <h2 style = 'font-family: sans-serif; text-align: center; width: 50%; margin-left: 25%; font-weight: 200;'>Disclaimer: You cannot take this back.</h2>
+        <form name="Playlists" action ='{{ url_for ("randomized")}}' method="post">
+            <select name="Playlists" >
+            {% for playlist in playlists %}
+                <option value="{{(playlist[0], playlist[1])}}">{{playlist[0]}}</option>
+            {% endfor %}
+            </select>
+            <input type = 'Submit' value = 'Randomize' style="font-family: sans-serif;"></input>
+        </form>
+        <p style = 'font-family: sans-serif; position: absolute; text-align: right; bottom: 1%; right:2%; font-size: 12pt;'>Spotify Randomizer Widget</p>
+        <img src = "{{url_for('static', filename = 'Spotify_Logo.png')}}" style="position: absolute; width:10%; height: auto; bottom:2%; left:1%">
+    </body>
+  </html>       
